@@ -209,5 +209,5 @@ predf = predf/length(pool)
 
 pred_hard = ifelse (predf > threshold, 1, 0)
 
-output = data.frame(ID_code=test$ID_code, target=pred_hard)
+output = data.frame(ID_code=test$ID_code, target=predf)
 write.csv(output,'Output.csv',row.names=F)
